@@ -1,4 +1,3 @@
--- FINAL SINGLE QUERY — MIMIC-IV v3.1 (Dec 2025) — CORRECT HYPERKALEMIA + ALL FIXES
 -- Target Trial Emulation: First-line antihypertensives in ICU
 WITH
   eligible_admissions AS (
@@ -147,4 +146,5 @@ WITH
       ) c
       ON o.subject_id = c.subject_id
   )
+
 SELECT * FROM `final` ORDER BY subject_id;
