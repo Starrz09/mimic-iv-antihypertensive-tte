@@ -13,7 +13,7 @@ WITH
     INNER JOIN `physionet-data.mimiciv_3_1_hosp.patients` p
       ON a.subject_id = p.subject_id
     INNER JOIN `physionet-data.mimiciv_3_1_icu.icustays` i
-      ON a.hadm_id = i.hadm_id  -- Added space before alias 'i'
+      ON a.hadm_id = i.hadm_id  
     WHERE
       p.anchor_age + (EXTRACT(YEAR FROM a.admittime) - p.anchor_year) >= 18
       AND i.first_careunit LIKE '%ICU%'
@@ -80,18 +80,18 @@ WITH
         SELECT k.subject_id, 1 AS aki_7d
         FROM `physionet-data.mimiciv_3_1_derived.kdigo_stages` k
         INNER JOIN `assigned` b
-          ON k.subject_id = b.subject_id  -- Join to 'assigned' to get time_zero
+          ON k.subject_id = b.subject_id  
         WHERE
           k.aki_stage >= 1
-          AND k.charttime >= b.time_zero  -- Use b.time_zero
+          AND k.charttime >= b.time_zero  
           AND k.charttime <= DATETIME_ADD(
-            b.time_zero, INTERVAL 7 DAY)  -- Use b.time_zero
+            b.time_zero, INTERVAL 7 DAY) 
         GROUP BY k.subject_id
       ) aki
       ON a.subject_id = aki.subject_id
     LEFT JOIN
       (
-        -- CORRECTED HYPERKALEMIA: K+ ≥5.5 mmol/L within 7 days of time_zero
+        
         SELECT l.subject_id, 1 AS hyperk_7d
         FROM `physionet-data.mimiciv_3_1_hosp.labevents` l
         INNER JOIN `assigned` b
@@ -148,3 +148,4 @@ WITH
   )
 
 SELECT * FROM `final` ORDER BY subject_id;
+
