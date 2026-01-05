@@ -107,8 +107,8 @@ The 64% AKI rate with CCBs, compared to 58% for ACE-inhibitors and 57% for thiaz
 Robustness of Findings
 Our E-value of 1.74 suggests moderate robustness to unmeasured confounding. An unobserved variable would need to increase both CCB prescription likelihood AND mortality risk by at least 74% each to nullify our results. While unmeasured confounding remains possible in observational research, this threshold seems substantial given our adjustment for age, comorbidities, and renal function.
 The negative control outcome analysis using prior stroke provides additional confidence. We found no association between treatment assignment and prior stroke after inverse probability weighting (CCB: p=0.960; thiazide: p=0.346). This suggests our propensity score weighting successfully balanced observed confounders, reducing residual confounding to non-significant levels.
-##Study Limitations
-###Several limitations warrant acknowledgment:
+## Study Limitations
+### Several limitations warrant acknowledgment:
 
 Drug class aggregation: We selected specific exemplar drugs (amlodipine, lisinopril, HCTZ) rather than analyzing entire drug classes. While this enhances mechanistic interpretation, it limits generalizability to other CCBs (diltiazem, nicardipine) or ACE-inhibitors with different pharmacokinetic profiles.
 Missing clinical variables: We lacked proteinuria measurements and BMI data—both potentially important confounders. Proteinuria, in particular, could modify the renal response to these medications.
