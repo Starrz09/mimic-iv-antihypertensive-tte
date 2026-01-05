@@ -116,7 +116,7 @@ Administrative data constraints: MIMIC-IV provides excellent ICU data quality, b
 Short-term follow-up: Our 30-day endpoint captures acute mortality but misses long-term outcomes. Whether treatment effects persist beyond hospital discharge remains unknown.
 Observational design: Despite rigorous propensity score methods and sensitivity analyses, we cannot definitively establish causation. Residual unmeasured confounding remains possible.
 
-###Clinical Implications
+### Clinical Implications
 Based on these findings, clinicians managing acute hypertension in ICU patients should consider prioritizing ACE-inhibitors (particularly lisinopril) or thiazide-like diuretics over calcium-channel blockers, especially in patients without baseline acute kidney injury or severe hyperkalemia. The mortality signal, combined with higher AKI rates, suggests CCBs may not be optimal first-line agents in this critically ill population—contrary to their established role in outpatient hypertension management.
 Future Directions
 Ethical constraints preclude randomized controlled trials in critically ill hypertensive patients. However, several research directions could strengthen these findings:
